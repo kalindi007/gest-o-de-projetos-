@@ -1,0 +1,28 @@
+name: CI  # Nome do fluxo de trabalho 
+
+on:
+  push:
+    branches:
+      - main  # Rodar o fluxo de trabalho quando houver push na branch principal
+  pull_request:
+    branches:
+      - main  # Rodar o fluxo de trabalho para pull requests na branch principal
+
+jobs:
+  build:
+    runs-on: ubuntu-latest  # O ambiente onde o código será executado
+
+    steps:
+    - uses: actions/checkout@v4  # Baixa o código do repositório
+
+    - name: Instalar dependências
+      run: |
+        echo "Nenhuma dependência para instalar"  # Comando de instalação de dependências, se houver
+
+    - name: Rodar testes (se houver)
+      run: |
+        echo "Nenhum teste automatizado configurado ainda"  # Comando para rodar testes, se houver
+
+    - name: Compilar o projeto (se necessário)
+      run: |
+        echo "Build simples concluído"  # Comando de build, se necessário
